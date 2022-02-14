@@ -13,6 +13,25 @@ app.use(
 
 app.use(express.static("public"));
 
+app.get("/product", (req, res) => {
+  res.send([
+    {
+      id: 1,
+      product: "Whey Gold",
+      price: "$100",
+    },
+    {
+      id: 1,
+      product: "Solar Plate",
+      price: "$20",
+    },
+    {
+      id: 1,
+      product: "Fruit Basket",
+      price: "$5",
+    },
+  ]);
+});
 app.get("/", (req, res) => {
   res.send(`
     <html>
